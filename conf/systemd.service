@@ -1,5 +1,5 @@
 [Unit]
-Description=A server for saving locationdata send by fmd
+Description=Find My Device: server for saving locationdata send by fmd
 After=network.target
 
 [Service]

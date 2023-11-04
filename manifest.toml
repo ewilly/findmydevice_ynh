@@ -3,7 +3,7 @@
 packaging_format = 2
 
 id = "fmd"
-name = "find my device"
+name = "Find My Device"
 description.en = "Server for saving location data send by fmd"
 description.fr = "Server for saving location data send by fmd"
 
