@@ -16,14 +16,14 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression --message="Setting up source files..." --weight=1
 
-ynh_setup_source --source_id="main" --dest_dir="$install_dir/objectbox"
-ln -s "$install_dir/objectbox/lib/libobjectbox.so" "/usr/lib/libobjectbox.so"
-
 # Download, check integrity, uncompress and patch the source from manifest.toml
 ynh_setup_source --source_id="main" --dest_dir="$install_dir"
 
 chown -R $app:www-data "$install_dir"
 chmod +x "$install_dir/fmdserver"
+
+ynh_setup_source --source_id="objectbox" --dest_dir="$install_dir/objectbox"
+ln -s "$install_dir/objectbox/lib/libobjectbox.so" "/usr/lib/libobjectbox.so"
 
 #=================================================
 # SYSTEM CONFIGURATION
