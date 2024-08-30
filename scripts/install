@@ -23,7 +23,7 @@ chown -R $app:www-data "$install_dir"
 chmod +x "$install_dir/fmdserver"
 
 ynh_setup_source --source_id="objectbox" --dest_dir="$install_dir/objectbox"
-ln -s "$install_dir/objectbox/lib/libobjectbox.so" "/usr/lib/libobjectbox.so"
+[ ! -e "/usr/lib/libobjectbox.so" ] && ln -s "$install_dir/objectbox/lib/libobjectbox.so" "/usr/lib/libobjectbox.so"
 
 #=================================================
 # SYSTEM CONFIGURATION
