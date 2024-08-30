@@ -50,7 +50,7 @@ ram.runtime = "50M"
         in_subdir = false
         extract = true
         url = "https://github.com/objectbox/objectbox-c/releases/download/v4.0.1/objectbox-linux-x64.tar.gz"
-        sha256 = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        sha256 = "ed2003acb1c2d2d6c19bc173d8bb789042a36afabeac333d61a18b1c5712c27a"
 
     [resources.system_user]
 
