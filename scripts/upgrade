@@ -18,6 +18,21 @@ ynh_script_progression "Upgrading source files..."
 ynh_setup_source --dest_dir="$install_dir" --keep = "config.yml"
 
 #=================================================
+# BUILD APP
+#=================================================
+ynh_script_progression "Building $app..."
+
+ynh_go_install
+
+pushd $install_dir
+	ynh_hide_warnings ynh_exec_as_app go build -o findmydevice
+popd
+
+ynh_go_remove
+
+chmod +x "$install_dir/findmydevice"
+
+#=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
 ynh_script_progression "Upgrading system configurations related to $app..."
