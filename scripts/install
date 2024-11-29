@@ -10,7 +10,20 @@ ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
-chmod +x "$install_dir/fmdserver"
+#=================================================
+# BUILD APP
+#=================================================
+ynh_script_progression "Building $app..."
+
+ynh_go_install
+
+pushd $install_dir/
+	ynh_hide_warnings ynh_exec_as_app CGO_ENABLED=0 go build -o $install_dir/findmydevice
+popd
+
+ynh_go_remove
+
+chmod +x "$install_dir/findmydevice"
 
 #=================================================
 # SYSTEM CONFIGURATION
