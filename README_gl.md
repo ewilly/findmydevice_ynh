@@ -5,11 +5,11 @@ NON debe editarse manualmente.
 
 # Find My Device para YunoHost
 
-[![Nivel de integración](https://apps.yunohost.org/badge/integration/fmd)](https://ci-apps.yunohost.org/ci/apps/fmd/)
-![Estado de funcionamento](https://apps.yunohost.org/badge/state/fmd)
-![Estado de mantemento](https://apps.yunohost.org/badge/maintained/fmd)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/findmydevice)](https://ci-apps.yunohost.org/ci/apps/findmydevice/)
+![Estado de funcionamento](https://apps.yunohost.org/badge/state/findmydevice)
+![Estado de mantemento](https://apps.yunohost.org/badge/maintained/findmydevice)
 
-[![Instalar Find My Device con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=fmd)
+[![Instalar Find My Device con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=findmydevice)
 
 *[Le este README en outros idiomas.](./ALL_README.md)*
 
@@ -30,19 +30,19 @@ You can also push commands to the FMD app on your device from FMD Server, e.g. t
 ## Documentación e recursos
 
 - Repositorio de orixe do código: <https://gitlab.com/Nulide/findmydeviceserver>
-- Tenda YunoHost: <https://apps.yunohost.org/app/fmd>
-- Informar dun problema: <https://github.com/YunoHost-Apps/fmd_ynh/issues>
+- Tenda YunoHost: <https://apps.yunohost.org/app/findmydevice>
+- Informar dun problema: <https://github.com/YunoHost-Apps/findmydevice_ynh/issues>
 
 ## Info de desenvolvemento
 
-Envía a túa colaboración á [rama `testing`](https://github.com/YunoHost-Apps/fmd_ynh/tree/testing).
+Envía a túa colaboración á [rama `testing`](https://github.com/YunoHost-Apps/findmydevice_ynh/tree/testing).
 
 Para probar a rama `testing`, procede deste xeito:
 
 ```bash
-sudo yunohost app install https://github.com/YunoHost-Apps/fmd_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/findmydevice_ynh/tree/testing --debug
 ou
-sudo yunohost app upgrade fmd -u https://github.com/YunoHost-Apps/fmd_ynh/tree/testing --debug
+sudo yunohost app upgrade findmydevice -u https://github.com/YunoHost-Apps/findmydevice_ynh/tree/testing --debug
 ```
 
 **Máis info sobre o empaquetado da app:** <https://yunohost.org/packaging_apps>
