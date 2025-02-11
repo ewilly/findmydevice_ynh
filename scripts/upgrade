@@ -24,10 +24,10 @@ ynh_script_progression "Building $app..."
 
 ynh_go_install
 
-#pushd "$install_dir"
-cd "$install_dir"
-ynh_exec_as_app go build -o findmydevice -v
-#popd
+pushd "$install_dir"
+	#ynh_exec_as_app go build -o findmydevice -v
+	ynh_exec_as_app CGO_ENABLED=0 go build -v -ldflags='-s -w' -o $install_dir/
+popd
 
 ynh_go_remove
 
