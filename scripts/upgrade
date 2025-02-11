@@ -26,9 +26,7 @@ ynh_go_install
 
 pushd "$install_dir"
 	#ynh_hide_warnings 
-	export GOPATH="$install_dir/go"
-	export GOCACHE="$install_dir/go/.cache"
-	go build -ldflags="-w -s -buildid=" -trimpath
+	go build -buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw -o findmydevice
 popd
 
 ynh_go_remove
