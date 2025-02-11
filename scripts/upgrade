@@ -26,6 +26,7 @@ ynh_go_install
 
 pushd "$install_dir"
 	#ynh_hide_warnings 
+	ynh_exec_as_app pwd 
 	ynh_exec_as_app go build -buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw -o findmydevice
 popd
 
