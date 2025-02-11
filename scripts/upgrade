@@ -24,11 +24,7 @@ ynh_script_progression "Building $app..."
 
 ynh_go_install
 
-#pushd "$install_dir"
-	#ynh_hide_warnings 
-	ynh_exec_as_app pwd 
-	ynh_exec_as_app go build -C "$install_dir" -o findmydevice
-#popd
+ynh_exec_as_app go build -C "$install_dir" -o findmydevice
 
 ynh_go_remove
 
