@@ -26,7 +26,9 @@ ynh_go_install
 
 pushd $install_dir
 	#ynh_hide_warnings 
-	ynh_exec_as_app go build -ldflags="-w -s -buildid=" -trimpath -o findmydevice
+	pushd findmydeviceserver
+	ynh_exec_as_app go build -ldflags="-w -s -buildid=" -trimpath
+	popd
 popd
 
 ynh_go_remove
