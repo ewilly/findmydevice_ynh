@@ -31,7 +31,7 @@ pushd "$install_dir"
 	#export GOCACHE="$install_dir/.cache"
 	#CGO_ENABLED=1 go build -trimpath -v -o "$install_dir/"
 	#ynh_exec_as_app make
-	go run main.go serve
+	ynh_exec_as_app go run main.go serve
 popd
 
 ynh_go_remove
