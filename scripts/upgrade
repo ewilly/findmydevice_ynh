@@ -28,7 +28,7 @@ pushd "$install_dir"
 	read -p "Press any key..."
 	#ynh_exec_as_app go build -o findmydevice -v
 	#ynh_exec_as_app CGO_ENABLED=0 go build -v -ldflags='-s -w' -o $install_dir/
-	#export GOPATH="$install_dir/go"
+	export GOPATH="$install_dir"
 	#export GOCACHE="$install_dir/.cache"
 	#CGO_ENABLED=1 go build -trimpath -v -o "$install_dir/"
 	#ynh_exec_as_app make
