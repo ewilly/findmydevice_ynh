@@ -33,7 +33,7 @@ pushd "$install_dir"
 	#CGO_ENABLED=1 go build -trimpath -v -o "$install_dir/"
 	#ynh_exec_as_app make
 	#ynh_exec_as_app go run main.go serve
-	ynh_exec_as_app CGO_ENABLED=0 GO111MODULE=on go build -v -a -ldflags='-s -w' -o $install_dir/
+	ynh_exec_as_app CGO_ENABLED=0 GO111MODULE=on go build -work -v -a -ldflags='-s -w' -o $install_dir/
 popd
 
 ynh_go_remove
