@@ -36,7 +36,7 @@ pushd "$install_dir"
 	#ynh_exec_as_app go run main.go serve
 	#ynh_exec_as_app CGO_ENABLED=0 GO111MODULE=on go build -work -v -a -ldflags='-s -w' -o $install_dir/
 	#go build -o findmydevice -v
-	go build -o "$install_dir/" main.go
+	ynh_exec_as_app go build -o "$install_dir/" main.go
 popd
 
 ynh_go_remove
